@@ -1,5 +1,5 @@
 //undefined
-var x;
+let x;
 console.log(x);
 
 //boolean

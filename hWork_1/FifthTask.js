@@ -5,7 +5,7 @@ a++;
 a++;
 a++;
 
-var z = x = a;
+let z = x = a;
 
 console.log(a);
 console.log(z);

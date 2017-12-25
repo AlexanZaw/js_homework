@@ -1,5 +1,5 @@
 //type conversion
-var a = 15;
+let a = 15;
 
 //type String
 a = a.toString();

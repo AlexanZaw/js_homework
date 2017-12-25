@@ -1,7 +1,7 @@
 //string concatenation
 let firstStr = 'JavaScript';
-var twoStr = 'courses';
+let twoStr = 'courses';
 
-var rezult = firstStr + ' ' + twoStr;
+let rezult = firstStr + ' ' + twoStr;
 
 console.log(rezult);
