@@ -1,19 +1,32 @@
 var setCountBird;
 
 function setBirds(countBird) {
-    var result;
+    let result;
 
     function setResultat(getCountBird){
-        var prResult;
+        let prResult;
 
-        if(getCountBird == 1) {
+        switch (getCountBird) {
+            case 1: 
+                prResult = " ворона";
+                break;
+            case 2:
+            case 3:
+            case 4: 
+                prResult = " вороны";
+                break;
+            default: 
+                prResult = " ворон";
+                break;
+        }
+       /* if(getCountBird == 1) {
                 prResult = " ворона.";
             } else if(getCountBird > 1 && getCountBird <= 4) {
                 prResult = " вороны.";
             } else {
                 prResult = " ворон.";
             };
-        
+        */
         return prResult;    
         };  
     
