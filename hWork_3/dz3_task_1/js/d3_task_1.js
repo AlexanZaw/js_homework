@@ -1,3 +1,4 @@
+'use ctrict'
 const elem = document.getElementById("result");
 function run() {
 // блок переменных
