@@ -1,13 +1,14 @@
 var btn = document.getElementById("play");
 var player1 = document.getElementById("player1");
 var player2 = document.getElementById("player2");
+var elem = document.getElementById("result");
 
 function getPlayerResult() {
     return Math.floor((Math.random() * 3) + 1);
 };
 
 function getNameById(id) {
-    var result;
+    let result;
     
     switch (id) {
         case 1:
@@ -26,7 +27,7 @@ function getNameById(id) {
 };
 
 function determineWinner(getFirstPlayer, getSecondPlayer) {
-    var result;
+    let result;
     
     if((getFirstPlayer == 1 && getSecondPlayer == 2) || (getFirstPlayer == 2 && getSecondPlayer == 3) || (getFirstPlayer == 3 && getSecondPlayer == 1)) {
         result = 1;
@@ -40,7 +41,7 @@ function determineWinner(getFirstPlayer, getSecondPlayer) {
 };
 
 function printResult(getNumberPlayer) {
-    var resultStr;
+    let resultStr;
     
     switch (getNumberPlayer) {
         case 1: 
@@ -55,11 +56,11 @@ function printResult(getNumberPlayer) {
             break;
     };
     
-    document.getElementById("result").innerHTML = resultStr;
+    elem.innerHTML = resultStr;
 };
 
 function runGame() {
-    var firstPlayer, secondPlayer;
+    let firstPlayer, secondPlayer;
 
     firstPlayer = getPlayerResult();
     secondPlayer = getPlayerResult();

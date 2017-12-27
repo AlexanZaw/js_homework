@@ -1,3 +1,4 @@
+const elem = document.getElementById("result");
 function run() {
 // блок переменных
     var first, second;
@@ -20,7 +21,7 @@ function run() {
     
     // функция проверки на дубль
     function isNumberEqual(getFirst, getSecond) {
-        if(getFirst == getSecond) {
+        if(getFirst === getSecond) {
             setResult("Выпал дубль. Число: " + getFirst);
         };
     };
@@ -28,7 +29,7 @@ function run() {
     // функция проверки разброса
     function isBigDifference(getFirst, getSecond) {
         if(getFirst < 3 && getSecond > 4) {
-            setResult("Большой разброс между костями. Разница составляет " + (getSecond - getFirst));
+            setResult("Большой разброс между костями. Разница составляет " + Math.abs(getSecond - getFirst));
         };
     };
  
@@ -52,7 +53,7 @@ function run() {
 
     // функция вывода в HTML-документ результатов
     function printResult(getResultStr) {
-        document.getElementById("result").innerHTML += getResultStr;
+        elem.innerHTML += getResultStr;
     };
     
     // основное тело главной функции run
@@ -72,7 +73,7 @@ function run() {
         //setResultTotal = setToltalOld((first + second), i); 
         total = setToltal(first + second);
     };
-    setResultTotal = ( total > 100) ? "Победа!!! Вы набрали: " + total + " очков.": "Вы проиграли. У Вас " + total + " очков.";
+    setResultTotal = (( total > 100) ? "Победа!!! Вы набрали: " : "Вы проиграли. У Вас ") + total + " очков.";
     
     printResult(setResultStr);
     printResult(setResultTotal);
