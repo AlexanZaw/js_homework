@@ -1,4 +1,6 @@
-var setYear;
+const elemTask3 = document.getElementById('result3');
+const inputValuesTask3 = document.getElementById('inputValue3');
+const btnTask3 = document.getElementById('rezButton3');
 
 function isLeapYear(getYear) {
     var result;
@@ -17,7 +19,7 @@ function isLeapYear(getYear) {
 
     if((typeof getYear) == "number") {
         result = isDivision(getYear);
-    } else if(isFinite(getYear)) {
+    } else if(!(isNaN(getYear))) {
         result = isDivision(Number(getYear));
     } else {
         result = "Ошибка! Введённое Вами значение не число.";
@@ -26,5 +28,7 @@ function isLeapYear(getYear) {
     return result;
 };
 
-setYear = "1900";
-console.log(isLeapYear(setYear));
+function run() {
+    elemTask3.innerHTML = isLeapYear(inputValuesTask3.value);
+}
+btnTask3.addEventListener("click", run);
